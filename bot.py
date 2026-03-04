@@ -94,7 +94,7 @@ def captcha_check(message):
 @bot.callback_query_handler(func=lambda call: True)
 def callback_handler(call):
 
-    bot.answer_callback_query(call.id)
+    bot.answer_callback_query(call.id, cache_time=0)
 
     if call.data == "account":
 
